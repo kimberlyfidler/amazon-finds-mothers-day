@@ -83,16 +83,23 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
   }
   .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   }
+  .card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
 
   .card-img {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background: #f5f0ee;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,6 +110,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .card-img img.contain {
+    object-fit: contain;
+    padding: 12px;
   }
 
   .badge {
@@ -117,6 +128,7 @@
     text-transform: uppercase;
     padding: 4px 9px;
     border-radius: 20px;
+    z-index: 2;
   }
   .badge.prime   { background: #0066c0; }
   .badge.editors { background: #6a8c4a; }
@@ -165,6 +177,8 @@
     padding: 12px;
     border-radius: 6px;
     transition: background 0.2s;
+    position: relative;
+    z-index: 2;
   }
   .btn-buy:hover { background: #a85e67; }
 
@@ -195,6 +209,7 @@
 <div class="grid">
 
   <div class="card">
+    <a href="https://amzn.to/4dykvjV" class="card-link" target="_blank" rel="nofollow noopener"></a>
     <div class="card-img">
       <img src="https://drive.google.com/thumbnail?id=189dbThITZkydaCDu8P2XWLsydMX3K1cO&sz=w600" alt="Bedsure Satin Pillowcase Set" />
       <span class="badge">Top Gift</span>
@@ -208,6 +223,7 @@
   </div>
 
   <div class="card">
+    <a href="https://amzn.to/4vyMtTh" class="card-link" target="_blank" rel="nofollow noopener"></a>
     <div class="card-img">
       <img src="https://drive.google.com/thumbnail?id=1tgjsnJIEKvDGBCK7owPi7oIsm_QCo5QL&sz=w600" alt="Revlon One-Step Volumizer Hair Dryer Brush" />
       <span class="badge prime">Prime</span>
@@ -221,8 +237,9 @@
   </div>
 
   <div class="card">
+    <a href="https://amzn.to/4sZzvw1" class="card-link" target="_blank" rel="nofollow noopener"></a>
     <div class="card-img">
-      <img src="https://drive.google.com/thumbnail?id=1G8jboNzgYe9My6oHmkmPaBTDlfuOzpoT&sz=w600" alt="LEVOIT Core 300 Air Purifier" style="object-fit:contain;padding:12px;" />
+      <img src="https://drive.google.com/thumbnail?id=1G8jboNzgYe9My6oHmkmPaBTDlfuOzpoT&sz=w600" alt="LEVOIT Core 300 Air Purifier" class="contain" />
       <span class="badge editors">Editor's Pick</span>
     </div>
     <div class="card-body">
@@ -234,6 +251,7 @@
   </div>
 
   <div class="card">
+    <a href="https://amzn.to/4t8JSNS" class="card-link" target="_blank" rel="nofollow noopener"></a>
     <div class="card-img">
       <img src="https://drive.google.com/thumbnail?id=1wyTCPLEOkIEqpwJjEHkSrYZtOzEW3NAS&sz=w600" alt="Cozy Earth Bamboo Sheet Set Queen" />
       <span class="badge luxury">Luxury Pick</span>
@@ -247,8 +265,9 @@
   </div>
 
   <div class="card">
+    <a href="https://amzn.to/4svbJqM" class="card-link" target="_blank" rel="nofollow noopener"></a>
     <div class="card-img">
-      <img src="https://drive.google.com/thumbnail?id=1PUL4glDWpEDcfP80rzNwWUG6TbtOrmQm&sz=w600" alt="Initial Necklace Personalized 14k Gold Fill" style="object-fit:contain;padding:12px;" />
+      <img src="https://m.media-amazon.com/images/I/313lOWc3RlL._AC_.jpg" alt="Initial Necklace Personalized 14k Gold Fill" class="contain" />
       <span class="badge seller">Best Seller</span>
     </div>
     <div class="card-body">
@@ -260,6 +279,7 @@
   </div>
 
   <div class="card">
+    <a href="https://amzn.to/4cdfLO8" class="card-link" target="_blank" rel="nofollow noopener"></a>
     <div class="card-img">
       <img src="https://drive.google.com/thumbnail?id=1s6aO_dApGElOKg4N5CTWQ0DTBef6qdGi&sz=w600" alt="Fitbit Inspire 3 Health and Fitness Tracker" />
       <span class="badge">Top Gift</span>
